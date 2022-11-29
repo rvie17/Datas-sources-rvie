@@ -12,7 +12,7 @@ src="https://www.googletagmanager.com/gtag/js?id=G-YBSGVH69GD"></script>
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
- gtag('config', ' G-YBSGVH69GD');
+ gtag('config', 'G-YBSGVH69GD');
 </script>
  """
  return prefix_google + "Hello World"
