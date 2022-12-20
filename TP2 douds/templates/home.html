@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>New title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBSGVH69GD"></script>
+        <script src="{{url_for('static', filename='googleAnalytics.js')}}">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YBSGVH69GD');
+        </script>
+
+    </head>
+    <body>
+        <h1>Home page</h1>
+        <button onclick="func()">Click me</button>
+        <script src="{{url_for('static', filename='googleAnalytics.js')}}"></script>
+    </body>
+</html>
