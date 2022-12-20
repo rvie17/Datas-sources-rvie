@@ -1,1 +1,0 @@
-{"id":"efffaf19-69c6-4343-8fac-eb23a5f88f31","space":40527,"runtime":"python3.9","name":"TP2_douds","path":"7o1in0","project":"a0g74l16","account":"144798365827","region":"eu-central-1","deps":["flask","requests"],"envs":null,"public":true,"log_level":"off","cron":""}
