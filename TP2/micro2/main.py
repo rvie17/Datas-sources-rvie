@@ -36,7 +36,7 @@ def logger():
 @app.route('/cookies/', methods = ["GET"])
 def req():
     #req = requests.get("https://www.google.com/")
-    req = requests.get("https://analytics.google.com/analytics/web/#/p344238092/reports/intelligenthome")
+    req = requests.get("https://analytics.google.com/analytics/web/#/p344247817/reports/reportinghub?params=_u..nav%3Dmaui")
     
     #return req.cookies.get_dict()
     return req.text
