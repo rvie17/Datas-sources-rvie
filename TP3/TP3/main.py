@@ -18,9 +18,7 @@ def hello_world():
 
   gtag('config', 'G-YBSGVH69GD');
 </script>
-<a href="/trend">Google Trend</a><br>
-<a href="/counter">Counter</a><br>
-<a href="/time-execution">Log Time Execution</a><br>
+<a href="/trend">Google Trend</a>     <a href="/counter">Counter</a>      <a href="/time-execution">Log_Time_Execution</a>
  """
     return prefix_google
 
