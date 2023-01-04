@@ -24,7 +24,7 @@ def hello_world():
  """
     return prefix_google
 
-###########################         Google trend        #############################################""
+#Google trend        
 
 from pytrends.request import TrendReq
 import pandas as pd
@@ -89,10 +89,38 @@ def trend():
     """
 
     return prefix_google
+# Counter
+
+@app.route('/counter')
+def counter():
+    prefix_google = """<a href="/">Home</a><br>"""
+    # Download Shakespear artwork
+    with open('shakespeare.txt', 'r') as f:
+        text = f.read()
+    start_time = time.time()
+    word_count_dict = count_words_dict(text)
+    f1 = f"The time to compute with dict is {time.time() - start_time}"
+    start_time = time.time()
+    word_count_counter = count_words_counter(text)
+    f2 = f"The time to compute with Counter function is {time.time() - start_time}"
+    return prefix_google + f"""{f1}<br><br><br>{f2}<br><br><br><br><br>{word_count_dict}<br><br><br><br><br>   {word_count_counter}"""
 
 
+def count_words_dict(text):
+    word_count = {}
+    for word in text.split():
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    return word_count
 
-###########################        Timer Log        #############################################""
+
+def count_words_counter(text):
+    return Counter(text.split())
+
+
+#Timer Log        
 
 import time
 from collections import Counter
@@ -106,11 +134,10 @@ def log_execution_time(func):
         return result
     return wrapper
 
-@app.route('/counter')
+@app.route('/time-execution')
 @log_execution_time
 def counter():
     # Download Shakespear artwork
-    """
     for i in range(1):
         start_time = time.time()
         with open('shakespeare.txt', 'r') as f:
@@ -119,10 +146,10 @@ def counter():
         start_time_2 = time.time()
         word_count_counter = count_words_counter(text)
         print(word_count_dict)
-        print(word_count_counter) """
+        print(word_count_counter) 
         
         #f"{word_count_dict}<br><br><br>     {word_count_counter}"
-    return render_template('counter.html')#"Counting time Counter"+"   "+f"  {(time.time() - start_time_2)}"+"Counting time dictionnary"+"   "+f"{(start_time_2 - start_time)}"
+    return "Counting time dictionnary"+"   "+f"  {(time.time() - start_time_2)}"+"Counting time counter"+"   "+f"{(start_time_2 - start_time)}"
 
 def count_words_dict(text):
     word_count = {}
